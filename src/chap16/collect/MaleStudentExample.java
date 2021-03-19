@@ -6,18 +6,17 @@ public class MaleStudentExample {
     public static void main(String[] args) {
         List<Student> totalList = Student.totalList();
 
-        MaleStudent maleStudent = totalList.stream()
+//        MaleStudent maleStudent = totalList.stream()
+//                .filter(s -> s.getSex() == Student.Sex.MALE)
+//                .collect(MaleStudent::new, MaleStudent::accumulate, MaleStudent::combine);
+//
+//        maleStudent.getList().stream().forEach(s -> System.out.println(s.getName()));
+
+        MaleStudent maleStudent = totalList.parallelStream()
                 .filter(s -> s.getSex() == Student.Sex.MALE)
                 .collect(MaleStudent::new, MaleStudent::accumulate, MaleStudent::combine);
 
         maleStudent.getList().stream().forEach(s -> System.out.println(s.getName()));
-
-        maleStudent = totalList.parallelStream()
-                .filter(s -> s.getSex() == Student.Sex.MALE)
-                .collect(MaleStudent::new, MaleStudent::accumulate, MaleStudent::combine);
-
-        maleStudent.getList().stream().forEach(s -> System.out.println(s.getName()));
-
 
     }
 }
