@@ -1,4 +1,4 @@
-package chap19.TCPBlockingChatting;
+package chap19.TcpBlockingChatting;
 
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -16,7 +16,6 @@ import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.util.Set;
 
 public class ClientExample extends Application {
     SocketChannel socketChannel;

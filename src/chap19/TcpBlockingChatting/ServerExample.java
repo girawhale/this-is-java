@@ -1,4 +1,4 @@
-package chap19.TCPBlockingChatting;
+package chap19.TcpBlockingChatting;
 
 import javafx.application.Application;
 import javafx.application.Platform;
